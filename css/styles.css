@@ -57,3 +57,12 @@ details a{display:block;padding:5px 0;color:var(--mut)}
 /* Tipografía de fileteado (va al final para que no la pise nada) */
 .top .logo,.hero h1,.wrap h1{font-family:var(--fil);font-weight:400;letter-spacing:.02em}
 .top .logo{font-size:34px}
+
+/* Celulares: logo arriba y menú en una segunda fila, deslizable con el dedo */
+@media(max-width:760px){
+.top{flex-wrap:wrap;gap:4px 12px;padding:8px 14px 0;overflow:visible}
+.logo{font-size:24px}
+.top nav{margin-left:0;width:100%;min-width:0;overflow-x:auto;gap:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{padding:8px 0 6px}
+}
