@@ -3,10 +3,7 @@
    Si no está, la web usa una letra de reemplazo y funciona igual. */
 @font-face{font-family:"Sabroso Filete";src:local("Sabroso Filete"),url("../fonts/SabrosoFilete.ttf") format("truetype");font-display:swap}
 :root{--fil:"Sabroso Filete","Kaushan Script",cursive}
-.logo,h1{font-family:var(--fil);font-weight:400;letter-spacing:.02em}
-:root{--bg:#fbf7ef;--card:#fff;--ink:#1c2740;--mut:#5d6a85;--head:#0f2a5c;--pri:#0f2a5c;--pri-ink:#fff;--gold:#f5b73b;--sky:#dcebf8;--line:#e7dfcf;--sh:0 4px 16px rgba(15,42,92,.12);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a33;--card:#15274b;--ink:#eaf0fb;--mut:#a9b8d4;--head:#dce8ff;--pri:#f5b73b;--pri-ink:#0d1a33;--sky:#1b3260;--line:#27407a;--sh:0 4px 16px rgba(0,0,0,.4);color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0d1a33;--card:#15274b;--ink:#eaf0fb;--mut:#a9b8d4;--head:#dce8ff;--pri:#f5b73b;--pri-ink:#0d1a33;--sky:#1b3260;--line:#27407a;--sh:0 4px 16px rgba(0,0,0,.4);color-scheme:dark}
+:root{--bg:#fbf7ef;--card:#fff;--ink:#1c2740;--mut:#5d6a85;--head:#0f2a5c;--pri:#0f2a5c;--pri-ink:#fff;--gold:#f5b73b;--sky:#d6e8f6;--line:#e7dfcf;--sh:0 4px 16px rgba(15,42,92,.12);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;line-height:1.5}
@@ -41,7 +38,7 @@ details{font-size:13px}summary{cursor:pointer;color:var(--head);font-weight:700}
 details a{display:block;padding:5px 0;color:var(--mut)}
 .three{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .tile{position:relative;height:190px;border-radius:16px;overflow:hidden;display:flex;align-items:flex-end;text-decoration:none;color:#fff;background-size:cover;background-position:center;box-shadow:var(--sh)}
-.tile::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,20,48,.78),transparent 65%)}
+.tile::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(36,24,12,.62),transparent 65%)}
 .tile span{position:relative;padding:14px;font-family:"Playfair Display",serif;font-size:21px;font-weight:700}
 .row{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}.row .tile{min-width:210px;height:150px}.row .tile span{font-size:17px}
 .icons{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 4px}
@@ -52,8 +49,11 @@ details a{display:block;padding:5px 0;color:var(--mut)}
 .chips{display:flex;flex-direction:column;gap:8px}
 .chips button{font:inherit;font-weight:700;text-align:left;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
 .chips button.on{background:var(--gold);color:#0f2a5c;border-color:var(--gold)}
-svg{width:100%;height:auto;border-radius:16px;background:#ece6d6;display:block}
+#svg{width:100%;height:auto;border-radius:16px;background:#ece6d6;display:block}
 .pin{cursor:pointer;stroke:#fff;stroke-width:2}
 #info{margin-top:12px;padding:14px 16px}
-.foot{text-align:center;color:var(--mut);font-size:12px;padding:22px 20px 34px}
+.foot{position:relative;margin-top:56px;background:#d6e8f6;color:#3d5278;text-align:center;font-size:12px;padding:18px 20px 34px}.foot::before{content:"";position:absolute;left:0;right:0;top:-39px;height:40px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath fill='%23d6e8f6' d='M0 40V22C200 -4 400 -4 600 18S1000 44 1200 14V40Z'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}.sun{vertical-align:-7px;margin-right:4px}
 @media(max-width:760px){.map{grid-template-columns:1fr}.chips{flex-direction:row;flex-wrap:wrap}.hero::before{background:linear-gradient(180deg,var(--bg) 20%,transparent 100%)}.hero{align-items:flex-start}.hero{min-height:420px}}
+/* Tipografía de fileteado (va al final para que no la pise nada) */
+.top .logo,.hero h1,.wrap h1{font-family:var(--fil);font-weight:400;letter-spacing:.02em}
+.top .logo{font-size:34px}
