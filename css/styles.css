@@ -1,0 +1,59 @@
+/* Tipografía de fileteado porteño (la de los carteles de Caminito).
+   Poné el archivo descargado en la carpeta fonts/ con el nombre SabrosoFilete.ttf.
+   Si no está, la web usa una letra de reemplazo y funciona igual. */
+@font-face{font-family:"Sabroso Filete";src:local("Sabroso Filete"),url("../fonts/SabrosoFilete.ttf") format("truetype");font-display:swap}
+:root{--fil:"Sabroso Filete","Kaushan Script",cursive}
+.logo,h1{font-family:var(--fil);font-weight:400;letter-spacing:.02em}
+:root{--bg:#fbf7ef;--card:#fff;--ink:#1c2740;--mut:#5d6a85;--head:#0f2a5c;--pri:#0f2a5c;--pri-ink:#fff;--gold:#f5b73b;--sky:#dcebf8;--line:#e7dfcf;--sh:0 4px 16px rgba(15,42,92,.12);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a33;--card:#15274b;--ink:#eaf0fb;--mut:#a9b8d4;--head:#dce8ff;--pri:#f5b73b;--pri-ink:#0d1a33;--sky:#1b3260;--line:#27407a;--sh:0 4px 16px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1a33;--card:#15274b;--ink:#eaf0fb;--mut:#a9b8d4;--head:#dce8ff;--pri:#f5b73b;--pri-ink:#0d1a33;--sky:#1b3260;--line:#27407a;--sh:0 4px 16px rgba(0,0,0,.4);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:30}
+a{color:inherit}h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--head);margin:0}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:10px 20px;overflow-x:auto}
+.logo{font-family:"Kaushan Script",cursive;font-size:28px;color:var(--head);text-decoration:none;white-space:nowrap}
+.top nav{display:flex;gap:16px;margin-left:auto}
+.top nav a{font-size:14px;font-weight:600;text-decoration:none;padding:6px 0;border-bottom:3px solid transparent;white-space:nowrap}
+.top nav a.on{border-color:var(--gold)}
+.hero{position:relative;min-height:380px;background-size:cover;background-position:center;display:flex;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 12%,transparent 75%)}
+.hero .in{position:relative;padding:36px 20px 36px max(20px,5vw);max-width:620px}
+.hero h1{font-size:clamp(38px,7vw,64px);line-height:1.05}
+.hero h1::after{content:"";display:block;width:160px;height:4px;background:var(--gold);border-radius:4px;margin-top:10px}
+.hero .sub{font-family:"Playfair Display",serif;font-size:22px;margin:14px 0 6px;color:var(--head)}
+.hero p{margin:6px 0 18px;max-width:440px}
+.btn{display:inline-block;background:var(--pri);color:var(--pri-ink);padding:10px 18px;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px}
+.btn.gold{background:var(--gold);color:#0f2a5c}
+.back{display:inline-block;margin-bottom:10px;font-size:14px;color:var(--head)}
+.wrap{max-width:1100px;margin:0 auto;padding:26px 20px}
+.wrap h2{font-size:28px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.card{background:var(--card);border-radius:16px;box-shadow:var(--sh);overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:180px;object-fit:cover;display:block}
+.card .b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:20px}.card p{margin:0;font-size:14px}
+.tag{align-self:flex-start;background:var(--sky);color:var(--head);font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px}
+.ad{color:var(--mut)}.mt{color:var(--mut);font-size:13px}
+.act{margin-top:auto;padding-top:8px;display:flex;flex-direction:column;gap:8px}
+details{font-size:13px}summary{cursor:pointer;color:var(--head);font-weight:700}
+details a{display:block;padding:5px 0;color:var(--mut)}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.tile{position:relative;height:190px;border-radius:16px;overflow:hidden;display:flex;align-items:flex-end;text-decoration:none;color:#fff;background-size:cover;background-position:center;box-shadow:var(--sh)}
+.tile::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,20,48,.78),transparent 65%)}
+.tile span{position:relative;padding:14px;font-family:"Playfair Display",serif;font-size:21px;font-weight:700}
+.row{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}.row .tile{min-width:210px;height:150px}.row .tile span{font-size:17px}
+.icons{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 4px}
+.icons a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 14px;font-size:14px;font-weight:600;text-decoration:none}
+.gal{columns:3 240px;column-gap:14px}.gal figure{margin:0 0 14px;break-inside:avoid;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--sh)}
+.gal img{width:100%;display:block}.gal figcaption{padding:8px 12px;font-size:13px;color:var(--mut)}
+.map{display:grid;grid-template-columns:230px 1fr;gap:16px}
+.chips{display:flex;flex-direction:column;gap:8px}
+.chips button{font:inherit;font-weight:700;text-align:left;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.chips button.on{background:var(--gold);color:#0f2a5c;border-color:var(--gold)}
+svg{width:100%;height:auto;border-radius:16px;background:#ece6d6;display:block}
+.pin{cursor:pointer;stroke:#fff;stroke-width:2}
+#info{margin-top:12px;padding:14px 16px}
+.foot{text-align:center;color:var(--mut);font-size:12px;padding:22px 20px 34px}
+@media(max-width:760px){.map{grid-template-columns:1fr}.chips{flex-direction:row;flex-wrap:wrap}.hero::before{background:linear-gradient(180deg,var(--bg) 20%,transparent 100%)}.hero{align-items:flex-start}.hero{min-height:420px}}

@@ -1,0 +1,8 @@
+TIPOGRAFÍA DE FILETEADO PORTEÑO
+
+Esta carpeta ya incluye la fuente "Sabroso Filete" (SabrosoFilete.ttf).
+Según la página de su autor (https://vapordruid.itch.io/sabrosofilete) tiene licencia
+Creative Commons Cero 1.0 (uso libre).
+
+Se usa en el logo y en los títulos grandes de la web (ver css/styles.css).
+No olvides subir esta carpeta a GitHub junto con el resto.
